@@ -1,0 +1,7 @@
+{
+  "presets": ["es2015"],
+  "sourceMaps": "inline",
+  "plugins": [
+    ["transform-react-jsx", { "pragma":"h" }]
+  ]
+}
