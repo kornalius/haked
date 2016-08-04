@@ -18,8 +18,8 @@ export default class BaseElement extends Component {
   constructor (state = {}) {
     super()
 
-    this._setupStore()
-    this._setupBase()
+    this.initStore()
+    this.initBase()
 
     this._css_id = shortid.generate()
 

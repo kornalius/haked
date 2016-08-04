@@ -1,10 +1,14 @@
+import { mixin_extend } from '../../utils'
+
 import File from '../classes/file'
 
-export default {
+import Root from './root'
 
-  init () {
-    this.define('root', { type: File, linked: true })
-    this.define('cwd', { type: File, linked: true, default: this._root })
+export default mixin_extend({}, Root, {
+
+  initFs (root = null) {
+    this.initRoot(root)
+    this.define('cwd', { type: File, linked: true, default: root })
   },
 
   get isRoot () { return this._cwd === this.root },

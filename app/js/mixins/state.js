@@ -1,7 +1,7 @@
 export default {
 
-  init () {
-    this.define('states', { type: Array })
+  initState (states = []) {
+    this.define('states', { type: Array, default: states })
     this.define('state', { type: Object })
     this.define('rollStates', { type: Boolean })
   },

@@ -15,7 +15,7 @@ raf(_deliverChanges)
 
 export default {
 
-  init () {
+  initObservable () {
     this.define('observers', { type: [Object], private: true })
   },
 

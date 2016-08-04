@@ -1,6 +1,6 @@
 export default {
 
-  init () {
+  initKeyboard () {
     this.define('keydown', { type: Object })
 
     this.define('keys', { type: Object, default: {

@@ -1,7 +1,7 @@
 export default {
 
-  init () {
-    this.define('spd', { type: Number })
+  initSpd (spd = 0) {
+    this.define('spd', { type: Number, default: spd })
   },
 
 }

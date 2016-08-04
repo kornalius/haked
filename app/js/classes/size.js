@@ -7,14 +7,7 @@ export default class Size extends mixin(Base, SizeMixin) {
 
   constructor (w = 0, h = 0) {
     super()
-    if (w instanceof Size) {
-      this._w = w.w
-      this._h = w.h
-    }
-    else {
-      this._w = w
-      this._h = h
-    }
+    this.initSize(w, h)
   }
 
 }

@@ -1,7 +1,7 @@
 export default {
 
-  init () {
-    this.define('icon', { type: String })
+  initIcon (icon = '') {
+    this.define('icon', { type: String, default: icon })
   },
 
 }

@@ -1,8 +1,8 @@
 export default {
 
-  init () {
+  initAnimation (duration = 0) {
     this._loops = 1
-    this._duration = 0
+    this._duration = duration
     this._clock = 0
     this._steps = null
     this._completed = false

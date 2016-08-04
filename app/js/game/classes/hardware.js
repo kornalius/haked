@@ -9,8 +9,8 @@ export default class Hardware extends mixin(Item, Spd, Size) {
 
   constructor (owner, spd, size) {
     super(owner)
-    this._spd = spd || 0
-    this._size = size || 0
+    this.initSpd(spd)
+    this.initSize(size)
   }
 
 }

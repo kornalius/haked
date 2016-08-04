@@ -5,8 +5,8 @@ import Diskette from './diskette'
 
 export default class DiskDrive extends Drive {
 
-  constructor (owner, diskette) {
-    super(owner)
+  constructor (owner, spd, diskette) {
+    super(owner, spd)
     this.define('diskette', { type: Diskette, linked: true, default: diskette })
   }
 

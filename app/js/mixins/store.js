@@ -1,12 +1,12 @@
 import { _, moment, uuid } from '../utils'
+import faker from 'faker'
 
-window._rootStore = null
 window._rootIndex = {}
 var refs = []
 
 export default {
 
-  _setupStore () {
+  initStore () {
     this.$fields = {}
     this.id = uuid.v4()
   },
@@ -153,6 +153,8 @@ export default {
         }
         return this
       }
+
+      this.constructor.prototype['random' + csn] = () => { return faker.random.arrayElement(this[pname]) }
     }
 
     let d = f.default

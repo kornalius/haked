@@ -21,6 +21,7 @@ import { ArrayObserver, PathObserver, ObjectObserver } from 'observe-js'
 import { h, render } from 'preact'
 import uuid from 'uuid'
 import moment from 'moment'
+import now from 'performance-now'
 
 const EE = new EventEmitter({ delimiter: '.' })
 
@@ -107,6 +108,7 @@ export {
   PathObserver,
   ObjectObserver,
   raf,
+  now,
   h,
   render,
 }

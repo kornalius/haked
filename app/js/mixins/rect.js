@@ -10,11 +10,12 @@ const serialize = (x, y, w, h) => {
 
 export default mixin_extend({}, PointMixin, SizeMixin, {
 
-  init () {
-    this.define('x', { type: Number })
-    this.define('y', { type: Number })
-    this.define('w', { type: Number })
-    this.define('h', { type: Number })
+  initRect (x, y, w, h) {
+    [x, y, w, h] = serialize(x, y, w, h)
+    this.define('x', { type: Number, default: x })
+    this.define('y', { type: Number, default: y })
+    this.define('w', { type: Number, default: w })
+    this.define('h', { type: Number, default: h })
   },
 
   clear () {

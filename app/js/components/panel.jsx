@@ -23,10 +23,10 @@ export default class Panel extends Frame {
     })
   }
 
-  render ({ children }) {
+  render ({ title, children }) {
     return <div class='flex-column flex-grow'>
 
-        <Titlebar id='title' class='row flex-start' text='Testing'></Titlebar>
+        <Titlebar id='title' class='row flex-start' text={ title }></Titlebar>
 
         <div id='content' class='row flex-stretch'>
           { children }

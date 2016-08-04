@@ -1,10 +1,14 @@
-import Drive from './drive'
+import { mixin } from '../../utils'
 
-export default class HardDrive extends Drive {
+import Memory from './memory'
 
-  constructor (owner) {
-    super(owner)
-    this.define('root', { type: File, default: new File(this, '/', true) })
+import Root from '../mixins/root'
+
+export default class HardDrive extends mixin(Memory, Root) {
+
+  constructor (owner, size, used) {
+    super(owner, size, used)
+    this.initRoot(owner, this)
   }
 
 }

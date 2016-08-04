@@ -6,9 +6,10 @@ const serialize = (start, end) => {
 
 export default {
 
-  init () {
-    this.define('start', { type: Number })
-    this.define('end', { type: Number })
+  initRange (start, end) {
+    [start, end] = serialize(start, end)
+    this.define('start', { type: Number, default: start })
+    this.define('end', { type: Number, default: end })
   },
 
   clear () {

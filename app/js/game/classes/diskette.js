@@ -1,14 +1,16 @@
-import Hardware from './hardware'
+import { mixin } from '../../utils'
 
-import File from './file'
+import Memory from './memory'
 import DiskDrive from './disk-drive'
 
-export default class Diskette extends Hardware {
+import Root from '../mixins/root'
 
-  constructor (owner, drive) {
-    super(owner)
+export default class Diskette extends mixin(Memory, Root) {
+
+  constructor (owner, drive, size, used) {
+    super(owner, size, used)
+    this.initRoot()
     this.define('drive', { type: DiskDrive, linked: true, default: drive })
-    this.define('root', { type: File, default: new File(this, '/', true) })
   }
 
 }

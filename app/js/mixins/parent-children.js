@@ -1,8 +1,8 @@
 export default {
 
-  init () {
-    this.define('parent', { type: Object, linked: true })
-    this.define('children', { type: Array })
+  initParentChildren (parent = null, children = []) {
+    this.define('parent', { type: Object, linked: true, default: parent })
+    this.define('children', { type: Array, default: children })
   },
 
   shut () {

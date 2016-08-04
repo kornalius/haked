@@ -6,9 +6,10 @@ const serialize = (w, h) => {
 
 export default {
 
-  init () {
-    this.define('w', { type: Number })
-    this.define('h', { type: Number })
+  initSize (w, h) {
+    [w, h] = serialize(w, h)
+    this.define('w', { type: Number, default: w })
+    this.define('h', { type: Number, default: h })
   },
 
   clear () {

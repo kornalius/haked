@@ -1,5 +1,14 @@
+import { mixin } from '../../utils'
+
 import Hardware from './hardware'
 
-export default class Memory extends Hardware {
+import MemoryMixin from '../mixins/memory'
+
+export default class Memory extends mixin(Hardware, MemoryMixin) {
+
+  constructor (owner, size, used) {
+    super(owner)
+    this.initMemory(size, used)
+  }
 
 }

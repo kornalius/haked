@@ -1,7 +1,7 @@
 export default {
 
-  init () {
-    this.define('day', { type: Number })
+  initDay (day = 0) {
+    this.define('day', { type: Number, default: day })
   },
 
   daysBefore (day) {

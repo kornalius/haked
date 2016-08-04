@@ -2,8 +2,8 @@ import Item from '../classes/item'
 
 export default {
 
-  init () {
-    this.define('equipments', { type: [Item], linked: true, singular: 'equipment', searchField: 'name' })
+  initEquipments (equipments = []) {
+    this.define('equipments', { type: [Item], linked: true, singular: 'equipment', searchField: 'name', default: equipments })
   },
 
   isEquipped (item) {

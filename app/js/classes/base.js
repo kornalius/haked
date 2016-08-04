@@ -5,8 +5,8 @@ import StoreMixin from '../mixins/store'
 export default class Base {
 
   constructor () {
-    this._setupStore()
-    this._setupBase()
+    this.initStore()
+    this.initBase()
   }
 
 }

@@ -6,14 +6,7 @@ export default class Point extends mixin(Base, PointMixin) {
 
   constructor (x, y) {
     super()
-    if (x instanceof Point) {
-      this._x = x.x
-      this._y = x.y
-    }
-    else {
-      this._x = x
-      this._y = y
-    }
+    this.initPoint(x, y)
   }
 
 }

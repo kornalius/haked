@@ -7,14 +7,7 @@ export default class Range extends mixin(Base, RangeMixin) {
 
   constructor (start, end) {
     super()
-    if (start instanceof Range) {
-      this._start = start.start
-      this._end = start.end
-    }
-    else {
-      this._start = start
-      this._end = end
-    }
+    this.initRange(start, end)
   }
 
 }

@@ -1,7 +1,7 @@
 export default {
 
-  init () {
-    this.define('value', { type: Number })
+  initValue (value = 0) {
+    this.define('value', { type: Number, default: value })
   },
 
 }

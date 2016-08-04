@@ -1,7 +1,7 @@
 export default {
 
-  init () {
-    this.define('qty', { type: Number })
+  initQty (qty = 0) {
+    this.define('qty', { type: Number, default: qty })
   },
 
   incQty (value) {

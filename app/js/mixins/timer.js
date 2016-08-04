@@ -2,10 +2,10 @@ import now from 'performance-now'
 
 export default {
 
-  init () {
-    this.define('interval', { type: Number })
-    this.define('duration', { type: Number })
-    this.define('repeats', { type: Number })
+  initTimer (duration = 0, interval = 0, repeats = 0) {
+    this.define('interval', { type: Number, default: interval })
+    this.define('duration', { type: Number, default: duration })
+    this.define('repeats', { type: Number, default: repeats })
 
     this.define('timeleft', { type: Number, private: true })
     this.define('repeatsleft', { type: Number, private: true })

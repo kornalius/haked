@@ -1,7 +1,7 @@
 export default {
 
-  init () {
-    this.define('focused', { type: Boolean })
+  initFocus (focused = false) {
+    this.define('focused', { type: Boolean, default: focused })
   },
 
   get focused () {

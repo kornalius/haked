@@ -1,7 +1,7 @@
 export default {
 
-  init () {
-    this.define('selected', { type: Boolean })
+  initSelect (selected = false) {
+    this.define('selected', { type: Boolean, default: selected })
   },
 
   select (selected) {

@@ -1,7 +1,7 @@
 export default {
 
-  init () {
-    this.define('time', { type: Number })
+  initTime (time = 0) {
+    this.define('time', { type: Number, default: time })
   },
 
   timeBefore (time) {

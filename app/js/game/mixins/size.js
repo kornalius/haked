@@ -1,7 +1,7 @@
 export default {
 
-  init () {
-    this.define('size', { type: Number })
+  initSize (size = 1) {
+    this.define('size', { type: Number, default: size })
   },
 
 }

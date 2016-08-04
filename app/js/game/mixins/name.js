@@ -1,7 +1,7 @@
 export default {
 
-  init () {
-    this.define('name', { type: String })
+  initName (name = '') {
+    this.define('name', { type: String, default: name })
   },
 
 }

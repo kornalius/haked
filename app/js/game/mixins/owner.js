@@ -1,7 +1,7 @@
 export default {
 
-  init () {
-    this.define('owner', { type: Object, linked: true })
+  initOwner (owner = null) {
+    this.define('owner', { type: Object, linked: true, default: owner })
   },
 
 }

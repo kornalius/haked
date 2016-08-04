@@ -1,7 +1,7 @@
 export default {
 
-  init () {
-    this.define('target', { type: Object, linked: true })
+  initTarget (target = null) {
+    this.define('target', { type: Object, linked: true, default: target })
   },
 
 }

@@ -7,9 +7,10 @@ const serialize = (x, y) => {
 
 export default {
 
-  init () {
-    this.define('x', { type: Number })
-    this.define('y', { type: Number })
+  initPoint (x, y) {
+    [x, y] = serialize(x, y)
+    this.define('x', { type: Number, default: x })
+    this.define('y', { type: Number, default: y })
   },
 
   clear () {

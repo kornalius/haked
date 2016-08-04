@@ -15,6 +15,13 @@ let app = new App()
 
 // class MyClass extends mixin(Base, Select, ParentChildren, Observable) {
 
+//  constructor () {
+//    super()
+//    this.initSelect()
+//    this.initParentChildren()
+//    this.initObservable()
+//  }
+
 //   test () {
 //     this.arr = []
 //     this.obj = {}
@@ -50,6 +57,10 @@ let app = new App()
 // }
 
 // class MyClass2 extends mixin(Base, Set) {
+//   constructor () {
+//     super()
+//     this.initSet()
+//   }
 // }
 
 // var o = new MyClass()

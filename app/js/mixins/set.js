@@ -1,8 +1,8 @@
 export default {
 
-  init () {
-    this.define('valids', { type: Object })
-    this.define('sets', { type: Object })
+  initSet (valids = {}, sets = {}) {
+    this.define('valids', { type: Object, default: valids })
+    this.define('sets', { type: Object, default: sets })
   },
 
   get hasSets () { return Object.keys(this.sets).length > 0 },

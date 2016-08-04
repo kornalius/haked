@@ -1,6 +1,6 @@
 export default {
 
-  init () {
+  initDragDrop () {
     this._draggable = false
     this._dragging = false
     this._origX = null

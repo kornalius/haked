@@ -15,7 +15,7 @@ export default {
     return this
   },
 
-  _setupBase () {
+  initBase () {
     this._ee = new EventEmitter({ delimiter: '.' })
     this.sup('init')
     this.emit('object.create')
@@ -60,5 +60,7 @@ export default {
     }, delay)
     return this
   },
+
+  delay (delay) { return new Promise(resolve => setTimeout(resolve, delay)) },
 
 }

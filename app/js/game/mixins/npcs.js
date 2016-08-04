@@ -2,8 +2,8 @@ import Npc from '../classes/npc'
 
 export default {
 
-  init () {
-    this.define('npcs', { type: [Npc], singular: 'npc', searchField: 'fullName' })
+  initNpcs (npcs = []) {
+    this.define('npcs', { type: [Npc], singular: 'npc', searchField: 'fullName', default: npcs })
   },
 
 }

@@ -1,6 +1,6 @@
 export default {
 
-  init () {
+  initMouse () {
     this.define('over', { type: Object })
     this.define('mousePos', { type: Object })
     this.define('lastEvent', { type: Object })

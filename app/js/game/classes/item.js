@@ -13,9 +13,15 @@ import Owner from '../mixins/owner'
 
 export default class Item extends mixin(Base, Owner, Parent, Name, Desc, Icon, Qty, Value) {
 
-  constructor (owner) {
+  constructor (owner, name, desc, icon, qty, value) {
     super()
-    this._owner = owner
+    this.initOwner(owner)
+    this.initParentChildren(parent)
+    this.initName(name)
+    this.initDesc(desc)
+    this.initIcon(icon)
+    this.initQty(qty)
+    this.initValue(value)
   }
 
 }
